@@ -1,0 +1,5 @@
+libro,50000.0,5
+lapicera,200.0,40
+lapiz,250.0,50
+alfajor,200.0,10
+jorgito,2000.0,30
