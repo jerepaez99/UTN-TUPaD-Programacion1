@@ -79,3 +79,34 @@ parcial_2 = {1,2,6,7,8,9}
 print(f"Ambos parciales: {parcial_1 & parcial_2}")
 print(f"Solo uno: {parcial_1 ^ parcial_2 }")
 print(f"Al menos uno: {parcial_1 | parcial_2}")
+
+
+#Ejercicio 8: Armá un diccionario donde las claves sean nombres de productos y los valores su stock. Permití al usuario:
+#Consultar el stock de un producto ingresado, agregar unidades al stock si el producto ya existe y agregar un nuevo producto si no existe.
+
+diccionario = {
+    "Manzanas": 15,
+    "Bananas": 20,
+    "Peras": 29
+}
+
+producto_usuario = input("Ingrese el nombre del producto del cual desea realizar una consulta: ")
+
+if producto_usuario in diccionario:
+    input_usuario = input(f"El stock del producto ingresado es: {diccionario[producto_usuario]} ¿Desea añadir stock? s/n: ").lower()
+    if input_usuario == "s":
+        diccionario[producto_usuario] += int(input("Ingrese la cantidad de unidades que desea agregar: "))
+    else:
+        pass
+else:
+    input_usuario = input("El producto no existe en la base de datos ¿Desea agregarlo? s/n: ").lower()
+    if input_usuario == "s":
+        diccionario[producto_usuario] = int(input("Ingrese la cantidad de unidades del producto: "))
+    else:
+        pass
+
+print(diccionario)
+
+
+#Ejercicio 9: Creá una agenda donde las claves sean tuplas de (día, hora) y los valores sean eventos
+#Permití consultar qué actividad hay en cierto día y hora.
